@@ -11,7 +11,7 @@ app.config['UPLOAD_FOLDER'] = 'uploads'
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 # Database Configuration
-DATABASE_URI = 'mysql+pymysql://root:1234@localhost/finance_tracker'
+DATABASE_URI = 'mysql+pymysql://root:1234@localhost/unified_family'
 engine = create_engine(DATABASE_URI)
 metadata = MetaData()
 
