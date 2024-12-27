@@ -50,12 +50,12 @@ def index():
     """Default route to display all expenses."""
     with engine.connect() as conn:
         result = conn.execute(select(expenses)).fetchall()
-    return render_template('expenses.html', expenses=result)
+    return render_template('show_expenses.html', expenses=result)
 
 @app.route('/form', methods=['GET'])
 def form():
     """Render the expense form."""
-    return render_template('form.html')
+    return render_template('add_expenses.html')
 
 @app.route('/submit', methods=['POST'])
 def submit():
